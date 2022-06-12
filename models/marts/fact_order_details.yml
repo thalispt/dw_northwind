@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: fact_order_details
+    columns:
+      - name: order_id
+        description: The primary key of the fact order details
+        tests:
+          - not_null
+
+      - name: employee_fk
+        tests:
+          - not_null
+
+      - name: customer_fk
+        tests:
+          - not_null
+
+      - name: shipper_fk
+        tests:
+          - not_null
+
+      - name: product_fk
+        tests:
+          - not_null
+      
+      - name: order_date
+        description: Date order
+
+      - name: required_date
+        description: Date required
+
+      - name: shipped_date
+        description: Date the order was shipped
+
+      - name: ship_via
+        description: Unique shipper identifier
+
+      - name: freight
+        description: Cost of freight
+
+      - name: discount
+        description: Cost of discount
+
+      - name: unit_price
+        description: Product unit value
+
+      - name: quantity
+        description: Product quantity on order
+
+      - name: total_order
+        description: Total of order without discount.
+
+      - name: total_liquid
+        description: Total of order with discount.
+
+      - name: is_discounted
+        description: Inform if the order had discount.

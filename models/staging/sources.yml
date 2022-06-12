@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: Northwind_erp
+    schema: northwind_EL
+    description: This is the northwind erp postgres database
+    tables:
+      - name: public_orders
+        description: Orders table
+        columns:
+            - name: order_id
+              tests:
+                  - unique
+                  - not_null
+            - name: status
+        
+      - name: public_products
+      - name: public_categories
+      - name: public_employess
+      - name: public_customers
+      - name: public_employees
+      - name: public_regions
+      - name: public_shippers
+      - name: public_orders_details
+      - name: public_suppliers  
+      - name: public_territories

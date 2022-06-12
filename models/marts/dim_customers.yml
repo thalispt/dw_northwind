@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: dim_customers
+    columns:
+      - name: customer_sk
+        description: The primary key of the dim customer
+        tests:
+          - unique
+          - not_null
+      
+      - name: customer_id
+        description: Unique identifier in customer table
+      
+      - name: contact_name
+        description: Name of the responsible person in client company
+      
+      - name: contact_title
+        description: Contact position
+      
+      - name: street_address
+        description: Customer's address
+      
+      - name: city
+        description: Customer's city
+      
+      - name: postal_code
+        description: Customer's postal-code
+      
+      - name: country
+        description: Customer's country
+      
+      - name: phone
+        description: Customer's contact phone
+
+      - name: fax
+        description: Customer's fax

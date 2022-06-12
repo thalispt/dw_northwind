@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: dim_products
+    description: The products table for our dw.
+    columns:
+      - name: product_sk
+        description: The primary key of the product.
+        tests:
+            - unique
+            - not_null
+
+      - name: product_id
+        description: The key of each product.
+
+      - name: supplier_id
+        description: The key of each supplier.
+    
+      - name: category_id
+        description: The key of each category.
+
+      - name: product_name
+        description: The name of the product.
+
+      - name: qty_per_unit
+        description: The quantity for each unit.
+      
+      - name: unit_price
+        description: The price for each unit.
+      
+      - name: units_in_stock
+        description: Quantity of units in stock.
+
+      - name: units_on_order
+        description: Quantity of units on order.
+
+      - name: reorder_level
+        description: Reorder level.
+      
+      - name: is_discontinued
+        description: Flag that shows if the product is discontinued or not.
+
+      - name: category_name
+        description: The name of category. 
+
+      - name: category_description
+        description: The description of category.
+
+      - name: picture
+        description: Picture of the product.
